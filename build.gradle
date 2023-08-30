@@ -21,6 +21,10 @@ repositories {
 	mavenCentral()
 }
 
+tasks.withType(JavaCompile){
+	options.encoding = "UTF-8"
+}
+
 dependencies {
 	// Security
 	implementation 'org.springframework.boot:spring-boot-starter-security'
