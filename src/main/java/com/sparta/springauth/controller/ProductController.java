@@ -14,7 +14,7 @@ public class ProductController {
     @GetMapping("/products")
     public String getProducts(@AuthenticationPrincipal UserDetailsImpl userDetails) {
         // Authentication 의 Principle
-        User user = userDetails.getUser();
+        User user = userDetails.user();
         System.out.println("user.getUsername() = " + user.getUsername());
         System.out.println("user.getEmail() = " + user.getEmail());
 

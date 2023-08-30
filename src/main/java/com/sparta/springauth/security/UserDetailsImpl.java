@@ -9,9 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class UserDetailsImpl implements UserDetails {
-
-    private final User user;
+public record UserDetailsImpl(User user) implements UserDetails {
 
     public UserDetailsImpl(User user) {
         this.user = user;
